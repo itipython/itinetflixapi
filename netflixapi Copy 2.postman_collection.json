@@ -1,0 +1,456 @@
+{
+	"info": {
+		"_postman_id": "389b5cd7-7884-46e5-a849-0ec681d1cfdc",
+		"name": "netflixapi Copy 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"mwadie\",\r\n    \"password\":\"mina123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://itinetflixapi.herokuapp.com/api/v2/users/login/",
+					"protocol": "http",
+					"host": [
+						"itinetflixapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset password",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\":\"minawadie19@gmail.com\",\r\n  \"username\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://itinetflixapi.herokuapp.com/api/v2/resetpassword/",
+					"protocol": "http",
+					"host": [
+						"itinetflixapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"resetpassword",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one show info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 96f9b2d284736782e7b3b12f9e7010916fbf4027",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"showID\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://itinetflixapi.herokuapp.com/api/v2/shows/info",
+					"protocol": "http",
+					"host": [
+						"itinetflixapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"shows",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 96f9b2d284736782e7b3b12f9e7010916fbf4027",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://itinetflixapi.herokuapp.com/api/v2/users/info",
+					"protocol": "http",
+					"host": [
+						"itinetflixapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"users",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 96f9b2d284736782e7b3b12f9e7010916fbf4027",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"dob\":\"1996-05-26\",\r\n    \"password\":\"mina123456789\"\r\n  \r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://itinetflixapi.herokuapp.com/api/v2/users/update",
+					"protocol": "http",
+					"host": [
+						"itinetflixapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add, update or delete user review",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 2502f5b9f610fe3ce1acbbefdbff95860d32c804",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"showID\":\"1\"\r\n\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/userreview/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"userreview",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get reviews",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 2502f5b9f610fe3ce1acbbefdbff95860d32c804",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"showID\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/reviews/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"reviews",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add, delete show to playlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 96f9b2d284736782e7b3b12f9e7010916fbf4027",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"showID\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://itinetflixapi.herokuapp.com/api/v2/showplaylist/",
+					"protocol": "http",
+					"host": [
+						"itinetflixapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"showplaylist",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete shows history",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 96f9b2d284736782e7b3b12f9e7010916fbf4027",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"AllHISTORY\":\"true\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://itinetflixapi.herokuapp.com/api/v2/showhistory/",
+					"protocol": "http",
+					"host": [
+						"itinetflixapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"showhistory",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"mwadie\",\r\n    \"password\":\"mina123456\",\r\n    \"gender\":\"m\",\r\n    \"email\":\"minawadie19@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://itinetflixapi.herokuapp.com/api/v2/users/signup/",
+					"protocol": "http",
+					"host": [
+						"itinetflixapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"users",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add show",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 0c0e83dc61c8fb979be46fc3afed0b74c53234fa",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/admin/shows/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"shows",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dashboard",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 96f9b2d284736782e7b3b12f9e7010916fbf4027",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://itinetflixapi.herokuapp.com/api/v2/shows/",
+					"protocol": "http",
+					"host": [
+						"itinetflixapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"shows",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
